@@ -1,0 +1,25 @@
+{
+  "remote_targets": {
+    "paycal-prod-nginx-access": {
+      "host": "paycal-prod",
+      "path": "/var/log/nginx/access.log"
+    },
+    "paycal-prod-nginx-error": {
+      "host": "paycal-prod",
+      "path": "/var/log/nginx/error.log"
+    },
+    "paycal-dev-nginx-access": {
+      "host": "paycal-dev",
+      "path": "/var/log/nginx/access.log",
+      "sudo": true
+    },
+    "pct-epbooks-visitors": {
+      "host": "pct",
+      "path": "/home/u394197407/domains/epbooks.ca/public_html/web_visitors.log"
+    },
+    "pct-epbook-visitors": {
+      "host": "pct",
+      "path": "/home/u394197407/domains/epbook.ca/public_html/web_visitors.log"
+    }
+  }
+}
