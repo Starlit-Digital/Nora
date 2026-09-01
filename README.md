@@ -74,3 +74,7 @@ Run `nora tui` to select a configured remote target, apply basic filters, run th
 analysis locally from the remote SSH stream, and drill into summary, status,
 method, path, client, referrer, user-agent, hourly, full text, or JSON-export
 views.
+
+## License
+
+NORA is open source under the 0BSD license. See [LICENSE](LICENSE).
