@@ -2,3 +2,6 @@ test-report.json
 TEST_EXAMINATION.md
 reports/
 /nora
+
+# Local developer compile output
+/.build/

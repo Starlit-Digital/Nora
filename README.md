@@ -6,6 +6,24 @@ It analyzes NGINX access logs as a stream and reports request volume, bandwidth,
 status codes, methods, top paths, clients, referrers, user agents, and hourly
 traffic.
 
+## Local developer installation
+
+```sh
+make build                       # compile and install ~/.local/bin/nora
+make compile                     # compile only to .build/nora (CI/cross-builds)
+make build PREFIX="$HOME/.local" # explicit installation prefix
+```
+
+`make install` is equivalent to `make build`. Put `$HOME/.local/bin` before
+Homebrew on PATH. The installed executable is copied out of the checkout, so
+moving the source repo does not break it. `scripts/build-local.sh` stages builds,
+rejects cross-architecture installation, and retains previous installs under
+`$HOME/.local/share/nora/installs/`. The current `install-info.txt` in that tool's
+share directory records source path, commit, dirty state, Go version, and SHA-256.
+Raw `go build` and release/CI scripts remain compile/package-only.
+Run `python3 scripts/test-local-install.py` for isolated installer regression checks.
+
+
 ## Usage
 
 ```sh
