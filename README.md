@@ -1,6 +1,6 @@
-# NORA
+# nora
 
-NORA is a local-first CLI for NGINX Observability and Request Analytics.
+nora is a local-first CLI for NGINX Observability and Request Analytics.
 
 It analyzes NGINX access logs as a stream and reports request volume, bandwidth,
 status codes, methods, top paths, clients, referrers, user agents, and hourly
@@ -63,10 +63,10 @@ nora tui
 Timestamps accept RFC3339 values or NGINX timestamps such as
 `10/Oct/2000:13:55:36 -0700`.
 
-NORA never transmits log data, performs DNS or geolocation lookups, or evaluates
+nora never transmits log data, performs DNS or geolocation lookups, or evaluates
 log contents.
 
-When `--ssh-host` is used, NORA logs in with the local `ssh` command, streams the
+When `--ssh-host` is used, nora logs in with the local `ssh` command, streams the
 remote log file through stdout, and performs all parsing, aggregation, and report
 generation locally.
 
@@ -95,4 +95,4 @@ views.
 
 ## License
 
-NORA is open source under the 0BSD license. See [LICENSE](LICENSE).
+nora is open source under the 0BSD license. See [LICENSE](LICENSE).

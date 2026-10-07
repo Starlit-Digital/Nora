@@ -65,7 +65,7 @@ func (a *App) chooseTarget() (string, config.RemoteTarget, bool, error) {
 		return "", config.RemoteTarget{}, false, fmt.Errorf("no remote targets configured")
 	}
 
-	fmt.Fprintln(a.out, "\nNORA Remote Targets")
+	fmt.Fprintln(a.out, "\nnora Remote Targets")
 	for i, name := range names {
 		target := a.cfg.RemoteTargets[name]
 		sudo := ""
@@ -136,7 +136,7 @@ func (a *App) chooseFilters() (analyzer.Options, bool, error) {
 
 func (a *App) drillDown(targetName string, res analyzer.Result) error {
 	for {
-		fmt.Fprintf(a.out, "\nNORA Report: %s\n", targetName)
+		fmt.Fprintf(a.out, "\nnora Report: %s\n", targetName)
 		fmt.Fprintln(a.out, "1. Summary")
 		fmt.Fprintln(a.out, "2. Status codes")
 		fmt.Fprintln(a.out, "3. HTTP methods")
