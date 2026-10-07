@@ -6,6 +6,7 @@ import (
 	"flag"
 	"fmt"
 	"io"
+	"nora/internal/toolbridge"
 	"os"
 	"os/exec"
 	"strconv"
@@ -18,7 +19,7 @@ import (
 	"nora/internal/tui"
 )
 
-const version = "0.1.0"
+const version = "0.2.0"
 
 const (
 	exitOK           = 0
@@ -55,6 +56,9 @@ func main() {
 }
 
 func run(args []string, stdout, stderr io.Writer, stdin io.Reader) int {
+	if handled, code := toolbridge.Handle(args, "nora", version, stdout, stderr); handled {
+		return code
+	}
 	if len(args) > 0 && args[0] == "tui" {
 		return runTUI(args[1:], stdout, stderr, stdin)
 	}

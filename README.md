@@ -96,3 +96,7 @@ views.
 ## License
 
 nora is open source under the 0BSD license. See [LICENSE](LICENSE).
+
+## Optional companion tools
+
+`nora tools doctor` checks installations; `tools plan` previews workflows and `tools run` collects local reports in a new private directory. Normal commands continue to work without other Starlit tools. AI feedback requires a separate explicit report/peer invocation. See [CLI integration](docs/TOOL_INTEGRATION.md) for recipes, limits and snapshot ownership.
